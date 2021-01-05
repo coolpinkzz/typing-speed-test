@@ -34,12 +34,18 @@
 
 
 
-        <div class="myword-box">
-            <textarea id="mywords" placeholder="Remember be Nice !" rows="10" class="form-control"
-                aria-label="With textarea"></textarea>
-        </div>
-        <button id="btn" type="button" class="btn btn-primary m-3 btn-lg  ">Start</button>
 
+        <form name="myform">
+            <div class="myword-box">
+
+                <textarea name="textfield" id="mywords" placeholder="Remember be Nice !" rows="10" class="form-control"
+                    aria-label="With textarea"></textarea>
+            </div>
+            <button id="btn" type="button" onclick="handleClick()" class="btn btn-primary m-3 btn-lg  ">Start</button>
+            <h6 id="rem-msg"> As soon as you click on Start button start content will generate and you have to
+                start typing !
+            </h6>
+        </form>
 
         <div style="display: none;" id="success" class="" role="alert">
 

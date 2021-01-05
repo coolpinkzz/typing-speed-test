@@ -25,6 +25,9 @@ const success = document.getElementById("success")
 
 let StartTime, EndTime;
 
+handleClick = () => {
+    document.myform.textfield.focus();
+}
 
 const PlayGame = () => {
     typedword.value = "";
@@ -110,6 +113,7 @@ btn.addEventListener('click', function () {
         correctWords.innerText = "--"
         error.innerText = "--"
         success.style.display = "none"
+        msg.focus();
         PlayGame();
     }
     else if (this.innerText == "Done") {
@@ -120,21 +124,3 @@ btn.addEventListener('click', function () {
 })
 
 
-var animateButton = function (e) {
-
-    e.preventDefault;
-    //reset animation
-    e.target.classList.remove('animate');
-
-    e.target.classList.add('animate');
-    setTimeout(function () {
-        e.target.classList.remove('animate');
-    }, 700);
-};
-
-var classname = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < classname.length; i++) {
-    classname[i].addEventListener('click', animateButton, false);
-
-}
